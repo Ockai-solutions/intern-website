@@ -112,10 +112,17 @@ function VennDiagram({
 
   return (
     <div
-      className={cn("relative shrink-0", className)}
+      className={cn(
+        "relative shrink-0",
+        "w-full max-w-[280px] aspect-square",
+        className
+      )}
       style={{
-        width: size,
-        height: size,
+        /*
+         * Keep the original `size` as the maximum size,
+         * but let CSS determine the actual responsive width.
+         */
+        maxWidth: size,
       }}
       role="img"
       aria-label={`Venn diagram: ${sets.map((s) => s.label).join(", ")}`}
@@ -123,9 +130,6 @@ function VennDiagram({
       {sets.map((set, index) => {
         const position = positions[index];
 
-        // Horizontal movement:
-        // - 2 circles: uses the existing overlap prop
-        // - 3 circles: top two circles use horizontalOverlap
         const translateX =
           sets.length === 2
             ? index === 0
@@ -137,8 +141,6 @@ function VennDiagram({
                 ? horizontalOverlap
                 : 0;
 
-        // Vertical movement:
-        // - Only the bottom circle moves for 3 circles
         const translateY =
           sets.length === 3 && index === 2
             ? overlap * 0.15
@@ -147,6 +149,18 @@ function VennDiagram({
         const colorClass = set.color
           ? undefined
           : defaultColors[index];
+
+        /*
+         * Everything inside the diagram is positioned using
+         * percentages of the original `size`.
+         *
+         * This allows the entire diagram to scale with its
+         * responsive container.
+         */
+        const left = `${((position.x - circleSize / 2) / size) * 100}%`;
+        const top = `${((position.y - circleSize / 2) / size) * 100}%`;
+
+        const circleWidth = `${(circleSize / size) * 100}%`;
 
         return (
           <div
@@ -158,15 +172,22 @@ function VennDiagram({
               set.className
             )}
             style={{
-              width: circleSize,
-              height: circleSize,
-              left: position.x - circleSize / 2,
-              top: position.y - circleSize / 2,
-              transform: `translate(${translateX}px, ${translateY}px)`,
+              width: circleWidth,
+              aspectRatio: "1",
+              left,
+              top,
+
+              /*
+               * Scale the overlap along with the diagram.
+               */
+              transform: `translate(
+                ${translateX / size * 100}%,
+                ${translateY / size * 100}%
+              )`,
+
               color: set.textColor,
             }}
           >
-            {/* Transparent background only */}
             <div
               className={cn(
                 "absolute inset-0 rounded-full opacity-55",
@@ -177,8 +198,7 @@ function VennDiagram({
               }}
             />
 
-            {/* Fully opaque text */}
-            <span className="relative z-10 drop-shadow-sm text-lg">
+            <span className="relative z-10 px-2 text-center text-base font-medium drop-shadow-sm sm:text-lg">
               {set.label}
             </span>
           </div>
@@ -189,9 +209,9 @@ function VennDiagram({
         <div
           className={cn(
             "pointer-events-none absolute left-1/2 top-1/2",
-            "-translate-x-1/2 -translate-y-8",
-            "text-center text-sm font-semibold",
-            "bg-card p-4 rounded-sm"
+            "-translate-x-1/2 -translate-y-1/2",
+            "max-w-[35%] text-center text-sm font-semibold",
+            "rounded-sm bg-card p-2 sm:p-4"
           )}
           style={{
             color: centerTextColor,
@@ -222,10 +242,16 @@ const VennDiagramFeature = (props: Props) => {
   };
 
   return (
-    <section className={cn("w-full py-16", className)}>
-      <div className="container m-auto">
-        <div className="grid items-center gap-16 lg:grid-cols-2">
-          <div className="flex justify-center">
+    <section
+      className={cn(
+        "w-full overflow-hidden py-16",
+        className
+      )}
+    >
+      <div className="container mx-auto w-full px-4 sm:px-6 lg:px-8">
+        <div className="grid min-w-0 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+          {/* Diagram */}
+          <div className="flex min-w-0 w-full justify-center">
             <VennDiagram
               sets={sets}
               size={size}
@@ -233,11 +259,13 @@ const VennDiagramFeature = (props: Props) => {
               horizontalOverlap={horizontalOverlap}
               centerLabel={centerLabel}
               centerTextColor={centerTextColor}
+              className="max-w-full"
             />
           </div>
 
-          <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
-            <h2 className="mb-6 text-balance text-4xl font-semibold tracking-tight lg:text-5xl">
+          {/* Content */}
+          <div className="flex min-w-0 flex-col items-center text-center lg:items-start lg:text-left">
+            <h2 className="mb-6 max-w-full text-balance text-4xl font-semibold tracking-tight lg:text-5xl">
               {heading}
             </h2>
 

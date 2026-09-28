@@ -24,9 +24,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="de"
-      className={`${geistSans.variable} ${geistMono.variable} dark h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} dark h-full antialiased `}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col m-6 md:m-0">
         <Navbar1
           logo={{
             url: "/",
