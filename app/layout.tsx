@@ -30,7 +30,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Navbar1
           logo={{
             url: "/",
-            src: "ockai-logo-c-inverted.png",
+            src: "logo.png",
             alt: "logo",
             title: "oCKai",
           }}
@@ -48,7 +48,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Footer2
           logo={{
             url: "/",
-            src: "ockai-logo-c-inverted.png",
+            src: "logo.png",
             title: "ockai.de",
             alt: "logo",
           }}
