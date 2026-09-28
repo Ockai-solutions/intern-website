@@ -118,7 +118,7 @@ const Footer2 = (props: Props) => {
                     src={logo?.src}
                     alt={logo?.alt}
                     title={logo?.title}
-                    className="h-7 dark:invert"
+                    className="h-7 "
                   />
                 </a>
               </div>
