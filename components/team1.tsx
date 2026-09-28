@@ -1,9 +1,10 @@
 import { cn } from "cn";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import React from "react";
 interface TeamMember {
   id: string;
-  name: string;
+  name: string | React.ReactNode;
   role: string;
   avatar: string;
 }

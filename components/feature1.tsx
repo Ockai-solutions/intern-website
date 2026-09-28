@@ -18,7 +18,7 @@ interface Buttons {
 
 interface FeatureSingleFocusProps {
   heading: string;
-  description: string;
+  description: any;
   image: Image;
   buttons?: Buttons;
   className?: string;

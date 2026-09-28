@@ -2,19 +2,32 @@
 
 import { Cta38 } from "@/components/cta38";
 import { Faq1 } from "@/components/faq1";
+import { Feature13 } from "@/components/feature13";
 import { Feature2 } from "@/components/feature2";
 import { Feature73 } from "@/components/feature73";
 import { Hero1 } from "@/components/hero1";
 import { Integration3 } from "@/components/integration3";
 import { Process1 } from "@/components/process1";
 import { Testimonial10 } from "@/components/testimonial10";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
+import {
+  Bot,
+  Workflow,
+  Blend
+} from "lucide-react";
+
 
 export default function Leistungen() {
   return (
     <main>
       <Hero1
-        heading="Von der Recherche bis zur Umsetzung."
-        description=" Wir entwickeln AI Agenten und Automatisierungen für konkrete Geschäftsprozesse in Marketing, Sales und M&A."
+        heading="Intelligente Automatisierung für Ihre wichtigsten Prozesse."
+        description="Von der Recherche bis zur Umsetzung. Wir entwickeln AI Agents und Automatisierungen für konkrete Geschäftsprozesse in Marketing, Sales und M&A. Dabei reicht das Spektrum von einfachen Workflows bis hin zu individuell entwickelten Agenten- und Softwaresystemen. Der Anwendungsfall bestimmt die Lösung. Nicht umgekehrt."
         buttons={{
           primary: { text: "Anwendungsfall besprechen", url: "/kontakt" },
           secondary: { text: "Vorgehen ansehen", url: "#vorgehen" },
@@ -25,17 +38,54 @@ export default function Leistungen() {
         }}
       />
       <hr />
-      [Hier einfügen: Drei technologien ein Ziel (workflow, Agent, Hybrid)]
+      <Feature13
+        className="bg-popover"
+        heading="Drei Technologien. Ein Ziel."
+        description="Jede Lösung basiert auf der Architektur, die das beste Verhältnis aus Qualität, Geschwindigkeit, Wartbarkeit und Skalierbarkeit bietet.  "
+        features={[
+          {
+            icon: <Workflow className="size-5 text-primary" />,
+            title: "Workflow",
+            description:
+              "Perfekt für Wiederkehrende, deterministische Abläufe",
+            href: "",
+          },
+          {
+            icon: <Bot className="size-5 text-primary" />,
+            title: "Agent",
+            description:
+              "KI übernimmt Aufgaben, die Verständnis, Bewertung oder Inhaltserstellung erfordern.",
+            href: "",
+          },
+          {
+            icon: <Blend className="size-5 text-primary" />,
+            title: "Hybrid",
+            description:
+              "Der Prozess bleibt strukturiert. Die KI unterstützt dort, wo Sprache, Kontext oder Entscheidungen erforderlich sind. ",
+            href: "",
+          }
+        ]}
+
+      />
+      <hr />
       <Feature73
-        className="bg-card"
-        heading="Drei Disziplinen. Eine technische Logik. [Fälle als Liste]"
-        description="Marketing, Sales und M&A folgen unterschiedlichen Zielen, teilen aber eine gemeinsame Informations- und Entscheidungslogik. Genau diese Struktur unterstützen wir mit KI und Automatisierung."
+        heading="Drei Disziplinen. Eine technische Logik."
+        description="Marketing, Sales und M&A folgen unterschiedlichen Zielen, teilen aber eine gemeinsame Informations- und Entscheidungslogik. Genau diese Struktur unterstützen wir mit AI und Automatisierung."
         buttons={{}}
         features={[
           {
             title: "Marketing",
-            description:
-              "Research, Kampagnen, Content, Partner und Performance intelligent unterstützen und automatisieren. Use Cases: Market Intelligence · Partner Research · Campaign Support · Content Workflows · Marketing Reporting",
+            description: (
+              <>
+                Research, Kampagnen, Content, Partner und Performance intelligent unterstützen.<hr className="mb-2 mt-2" />
+                <b>Use Cases:</b>
+                <br />· Market Intelligence
+                <br />· Partner Research
+                <br />· Campaign Support
+                <br />· Content Workflows
+                <br />· Marketing Reporting
+              </>
+            ),
             image: {
               src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
               alt: "Marketing Use Cases",
@@ -43,8 +93,18 @@ export default function Leistungen() {
           },
           {
             title: "Sales",
-            description:
-              "Informationen schneller in konkrete Vertriebsarbeit übersetzen. Use Cases: Lead Research · Lead Qualification · Account Research · Gesprächsvorbereitung · CRM Automation · Angebote & Follow-ups",
+            description: (
+              <>
+                Informationen schneller in konkrete Vertriebsarbeit übersetzen.<hr className="mb-2 mt-2" />
+                <b>Use Cases:</b>
+                <br />· Lead Research
+                <br />· Lead Qualification
+                <br />· Account Research
+                <br />· Gesprächsvorbereitung
+                <br />· CRM Automation
+                <br />· Angebote & Follow-ups
+              </>
+            ),
             image: {
               src: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80",
               alt: "Sales Use Cases",
@@ -52,8 +112,18 @@ export default function Leistungen() {
           },
           {
             title: "M&A",
-            description:
-              "Informationsintensive Transaktionsprozesse strukturieren und beschleunigen. Use Cases: Target Screening · Market & Company Research · Document Intelligence · Due Diligence · Post-Merger · Carve-out",
+            description: (
+              <>
+                Informationsintensive Transaktionsprozesse strukturieren und beschleunigen<hr className="mb-2 mt-2" />
+                <b>Use Cases:</b>
+                <br />· Target Screening
+                <br />· Market & Company Research
+                <br />· Document Intelligence
+                <br />· Due Diligence
+                <br />· Post-Merger
+                <br />· Carve-out
+              </>
+            ),
             image: {
               src: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80",
               alt: "M&A Use Cases",
@@ -63,8 +133,36 @@ export default function Leistungen() {
       />
       <hr />
       <Feature2
-        heading="Marketingprozesse schneller von Information zu Umsetzung bringen.[Akkordeon + Unser Ansatz nach oben]"
-        description="Marketing besteht aus vielen wiederkehrenden Aufgaben: recherchieren, strukturieren, vergleichen, vorbereiten, erstellen, verteilen und auswerten. Viele dieser Schritte lassen sich automatisieren oder intelligent unterstützen.\n\nMarket Reporting: Märkte, Unternehmen, Wettbewerber oder Trends automatisiert beobachten, analysieren und relevante Informationen strukturiert aufbereiten.\n\nPartner & Kooperationen: Potenzielle Partner identifizieren, recherchieren, anhand definierter Kriterien bewerten und für die Ansprache vorbereiten.\n\nCampaign Support: Kampagnenprozesse von der Recherche über die Vorbereitung bis zum Reporting unterstützen und automatisieren.\n\nContent Workflows: Informationen aus verschiedenen Quellen zusammenführen und für wiederkehrende Content-Prozesse nutzbar machen.\n\n\nUnser Ansatz: Wir betrachten nicht nur einzelne Marketingaufgaben, sondern den gesamten Ablauf - von der ersten Information bis zur Umsetzung - und automatisieren dort, wo ein echter Effekt entsteht."
+        className="bg-popover"
+        heading="Marketingprozesse schneller von Information zu Umsetzung bringen."
+        description={
+          <>
+            <p>
+              Marketing besteht aus vielen wiederkehrenden Aufgaben: recherchieren, strukturieren, vergleichen, vorbereiten, erstellen, verteilen und auswerten. Viele dieser Schritte lassen sich automatisieren oder intelligent unterstützen:
+            </p>
+            <Accordion>
+              <AccordionItem value="item-1">
+                <AccordionTrigger>Market Intelligence:</AccordionTrigger>
+                <AccordionContent>
+                  Märkte, Unternehmen, Wettbewerber oder Trends automatisiert beobachten und relevante Informationen strukturiert aufbereiten.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-2">
+                <AccordionTrigger>Partner & Kooperationen:</AccordionTrigger>
+                <AccordionContent>
+                  Potenzielle Partner identifizieren, recherchieren, anhand definierter Kriterien bewerten und für die Ansprache vorbereiten.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-3">
+                <AccordionTrigger>Content Workflows:</AccordionTrigger>
+                <AccordionContent>
+                  Informationen aus verschiedenen Quellen zusammenführen und für wiederkehrende Content-Prozesse nutzbar machen.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+            <p>Unser Ansatz: Wir betrachten den gesamten Ablauf - von der ersten Information bis zur Umsetzung - und automatisieren dort, wo ein echter Effekt entsteht.</p>
+          </>
+        }
         buttons={{
           primary: { text: "Marketing-Use-Case besprechen", url: "/kontakt" },
         }}
@@ -75,10 +173,55 @@ export default function Leistungen() {
       />
       <hr />
       <Feature2
-        className="bg-card"
+
         reverse
         heading="Aus Informationen schneller konkrete Vertriebsarbeit machen."
-        description="Sales-Teams verbringen viel Zeit mit Recherche, Vorbereitung, Dokumentation und Nachbereitung. AI und Automatisierung können diese Prozesse beschleunigen, ohne den persönlichen Kundenkontakt aus dem Mittelpunkt zu nehmen.\n\nLead Research: Unternehmen und Ansprechpartner automatisiert recherchieren und relevante Informationen zusammentragen.\n\nLead Qualification & Priorisierung: Potenzielle Kunden anhand definierter Kriterien bewerten und für die weitere Bearbeitung priorisieren.\n\nAccount Research: Relevante Informationen zu bestehenden und potenziellen Kunden strukturiert verfügbar machen.\n\nGesprächsvorbereitung: Informationen aus CRM, Unternehmenswebsites, Nachrichten und weiteren Quellen für Termine zusammenführen.\n\nCRM Automation: Wiederkehrende Dokumentations-, Datenpflege- und Follow-up-Prozesse automatisieren.\n\nAngebote & Follow-ups: Vertriebsinformationen strukturiert aufbereiten und nachgelagerte Prozesse unterstützen.\n\nUnser Ansatz: Sales-Automatisierung soll nicht mehr Softwarearbeit erzeugen. Sie soll Vertriebsmitarbeiter mit den richtigen Informationen versorgen und manuelle Schritte reduzieren."
+        description={
+          <>
+            <p>
+              Sales-Teams verbringen viel Zeit mit Recherche, Vorbereitung, Dokumentation und Nachbereitung. AI und Automatisierung können diese Prozesse beschleunigen, ohne den persönlichen Kundenkontakt aus dem Mittelpunkt zu nehmen:
+            </p>
+            <Accordion>
+              <AccordionItem value="item-1">
+                <AccordionTrigger>Market Intelligence:</AccordionTrigger>
+                <AccordionContent>
+                  Märkte, Unternehmen, Wettbewerber oder Trends automatisiert beobachten und relevante Informationen strukturiert aufbereiten.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-2">
+                <AccordionTrigger>Lead Research:</AccordionTrigger>
+                <AccordionContent>
+                  Unternehmen und Ansprechpartner automatisiert recherchieren und relevante Informationen zusammentragen.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-3">
+                <AccordionTrigger>Lead Qualification & Priorisierung:</AccordionTrigger>
+                <AccordionContent>
+                  Potenzielle Kunden anhand definierter Kriterien bewerten und für die weitere Bearbeitung priorisieren.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-4">
+                <AccordionTrigger>Account Research:</AccordionTrigger>
+                <AccordionContent>
+                  Relevante Informationen zu bestehenden und potenziellen Kunden strukturiert verfügbar machen.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-5">
+                <AccordionTrigger>Gesprächsvorbereitung:</AccordionTrigger>
+                <AccordionContent>
+                  Informationen aus CRM, Unternehmenswebsites, Nachrichten und weiteren Quellen für Termine zusammenführen.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-6">
+                <AccordionTrigger>Angebote & Follow-ups:</AccordionTrigger>
+                <AccordionContent>
+                  Vertriebsinformationen strukturiert aufbereiten und nachgelagerte Prozesse unterstützen.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+            <p>Unser Ansatz: Sales-Automatisierung soll Vertriebsmitarbeiter mit den richtigen Informationen versorgen und unnötige manuelle Schritte reduzieren.</p>
+          </>
+        }
         buttons={{
           primary: { text: "Sales-Use-Case besprechen", url: "/kontakt" },
         }}
@@ -89,8 +232,48 @@ export default function Leistungen() {
       />
       <hr />
       <Feature2
+        className="bg-popover"
         heading="Von der Recherche zur Transaktion."
-        description="M&A-Prozesse sind informationsintensiv und häufig von manueller Recherche, Dokumenten und wiederkehrenden Analysen geprägt. Genau hier können AI Agents und Automatisierungen einen großen Teil der operativen Arbeit unterstützen.\n\nTarget Screening: Unternehmen nach definierten Kriterien identifizieren, recherchieren, bewerten und priorisieren.\n\nMarket & Company Research: Märkte, Unternehmen und Wettbewerber strukturiert analysieren und Informationen aus unterschiedlichen Quellen zusammenführen.\n\nDocument Intelligence: Große Mengen an Dokumenten durchsuchen, strukturieren und relevante Informationen extrahieren.\n\nDue-Diligence-Unterstützung: Informationen aus unterschiedlichen Dokumenten und Quellen zusammenführen und für die weitere Prüfung aufbereiten.\n\nM&A Knowledge: Unternehmensinternes Wissen, Vorlagen und bestehende Informationen für wiederkehrende Aufgaben nutzbar machen.\n\nPost-Merger & Carve-out: Wiederkehrende Informations-, Dokumentations- und Koordinationsprozesse nach oder im Rahmen einer Transaktion unterstützen.\n\nUnser Ansatz: Wir automatisieren nicht die Entscheidung. Wir automatisieren die Arbeit, die notwendig ist, damit Menschen schneller und fundierter entscheiden können."
+        description={
+          <>
+            <p>
+              M&A-Prozesse sind informationsintensiv und häufig von manueller Recherche, Dokumenten und wiederkehrenden Analysen geprägt. Genau hier können AI Agents und Automatisierungen einen großen Teil der operativen Arbeit unterstützen:
+            </p>
+            <Accordion>
+              <AccordionItem value="item-1">
+                <AccordionTrigger>Market & Company Research:</AccordionTrigger>
+                <AccordionContent>
+                  Märkte, Unternehmen und Wettbewerber strukturiert analysieren und Informationen aus unterschiedlichen Quellen zusammenführen.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-2">
+                <AccordionTrigger>Document Intelligence:</AccordionTrigger>
+                <AccordionContent>
+                  Große Mengen an Dokumenten durchsuchen, strukturieren und relevante Informationen extrahieren.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-3">
+                <AccordionTrigger>Due-Diligence-Unterstützung:</AccordionTrigger>
+                <AccordionContent>
+                  Informationen aus unterschiedlichen Dokumenten und Quellen zusammenführen und für die weitere Prüfung aufbereiten.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-4">
+                <AccordionTrigger>M&A Knowledge:</AccordionTrigger>
+                <AccordionContent>
+                  Unternehmensinternes Wissen, Vorlagen und bestehende Informationen für wiederkehrende Aufgaben nutzbar machen.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-5">
+                <AccordionTrigger>Post-Merger & Carve-out:</AccordionTrigger>
+                <AccordionContent>
+                  Wiederkehrende Informations-, Dokumentations- und Koordinationsprozesse nach oder im Rahmen einer Transaktion unterstützen.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+            <p>Unser Ansatz: automatisieren die Arbeit, die notwendig ist, damit Menschen schneller und fundierter entscheiden können.</p>
+          </>
+        }
         buttons={{
           primary: { text: "M&A-Use-Case besprechen", url: "/kontakt" },
         }}
@@ -101,7 +284,6 @@ export default function Leistungen() {
       />
       <hr />
       <Testimonial10
-        className="bg-card"
         quote="Nicht jeder Anwendungsfall braucht einen komplexen AI Agent. Und
           nicht jeder Prozess lässt sich mit einem einfachen Workflow lösen.
           Deshalb wählen wir die Technologie erst dann, wenn klar ist, was die
@@ -117,7 +299,7 @@ export default function Leistungen() {
       />
       <hr />
       <Process1
-
+        className="bg-popover"
         heading="Aus einem Use Case wird eine funktionierende Lösung."
         description="Wir führen den Prozess von der ersten Idee bis zur umsetzbaren Lösung strukturiert durch und richten Scope und Technik am konkreten Anwendungsfall aus."
         steps={[
@@ -154,48 +336,47 @@ export default function Leistungen() {
       />
       <hr />
       <Integration3
-        className="bg-card"
         heading="Unser Werkzeugkasten"
-        subheading="Wir nutzen für jeden Aawendungsfall das richtige System"
+        subheading="Wir nutzen für jeden Anwedungsfall das passende Framework"
         items={[
           {
             id: 1,
-            icon: "https://api.iconify.design/simple-icons:openai.svg",
-            title: "chatGPT",
+            icon: "https://api.iconify.design/selfhst:chatgpt.svg",
+            title: "chatGPT SDK<",
             description:
               "",
           },
           {
             id: 1,
-            icon: "https://api.iconify.design/simple-icons:openai.svg",
+            icon: "https://api.iconify.design/logos:microsoft-icon.svg",
             title: "MS Copilot & Power Automate",
             description:
               "",
           },
           {
             id: 1,
-            icon: "https://api.iconify.design/mdi:microsoft.svg",
+            icon: "https://api.iconify.design/devicon:n8n.svg",
             title: "n8n",
             description:
               "",
           },
           {
             id: 1,
-            icon: "https://api.iconify.design/simple-icons:mastra.svg",
+            icon: "https://api.iconify.design/selfhst:flowise.svg",
             title: "Flowise",
             description:
               "",
           },
           {
             id: 1,
-            icon: "https://api.iconify.design/simple-icons:flowise.svg",
+            icon: "https://api.iconify.design/thesvg-color:mastra.svg",
             title: "Mastra",
             description:
               "",
           },
           {
             id: 1,
-            icon: "https://api.iconify.design/simple-icons:langchain.svg",
+            icon: "https://api.iconify.design/thesvg-color:langchain-corporate.svg",
             title: "Langchain",
             description:
               "",
@@ -205,6 +386,7 @@ export default function Leistungen() {
       />
       <hr />
       <Faq1
+        className="bg-popover"
         heading="Häufige Fragen"
         items={[
           {
@@ -250,9 +432,8 @@ export default function Leistungen() {
       />
       <hr />
       <Cta38
-        className="bg-card"
-        heading="Nicht die komplexeste Lösung. Die richtige."
-        description="Wir suchen nicht die technisch komplexeste Lösung. Wir entwickeln die effizienteste, passendste und langfristig betreibbare Lösung für Ihren Anwendungsfall."
+        heading="Die richtige Lösung."
+        description="Wir entwickeln die effizienteste, passendste und langfristig betreibbare Lösung für Ihren Anwendungsfall."
         buttons={{
           primary: { text: "Anwendungsfall besprechen", url: "/kontakt" },
           secondary: { text: "Über oCKai", url: "/ueber-uns" },

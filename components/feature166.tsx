@@ -1,4 +1,5 @@
 import { cn } from "cn";
+import React from "react";
 
 interface Feature {
   title: string;
@@ -10,7 +11,7 @@ interface Feature {
 }
 
 interface Feature166Props {
-  heading: string;
+  heading: string | React.ReactNode;
   description: string;
   feature1: Feature;
   feature2: Feature;

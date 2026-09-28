@@ -106,7 +106,7 @@ const Illustration = (props: React.SVGProps<SVGSVGElement>) => {
         y1="2.57422"
         x2="21.5762"
         y2="2.57422"
-        stroke="#FF0000"
+        stroke="oklch(0.7029 0.1528 69.451)"
         strokeWidth="4"
       />
       <line
@@ -114,7 +114,7 @@ const Illustration = (props: React.SVGProps<SVGSVGElement>) => {
         y1="19.624"
         x2="19.5762"
         y2="4.57422"
-        stroke="#FF0000"
+        stroke="oklch(0.7029 0.1528 69.451)"
         strokeWidth="4"
       />
     </svg>

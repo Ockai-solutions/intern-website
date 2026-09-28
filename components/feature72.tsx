@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/button";
 
 interface FeatureCardListItem {
   title: string;
-  description: any;
+  description: string;
   image: Image;
   href?: string;
   icon?: React.ReactNode;
@@ -36,16 +36,16 @@ interface Buttons {
 
 interface FeatureCardListProps {
   heading: string;
-  description?: any;
+  description?: string;
   features?: FeatureCardListItem[];
   buttons?: Buttons;
   className?: string;
 }
 
-interface Feature73Props extends FeatureCardListProps {}
-type Props = Partial<Feature73Props>;
+interface Feature72Props extends FeatureCardListProps {}
+type Props = Partial<Feature72Props>;
 
-const defaultProps: Feature73Props = {
+const defaultProps: Feature72Props = {
   heading: "Build faster with production ready features",
   description:
     "Every component is built with React, Tailwind CSS, and shadcn/ui. Copy, paste, and customize to match your brand in minutes.",
@@ -125,16 +125,16 @@ const defaultProps: Feature73Props = {
   },
 };
 
-const Feature73 = (props: Props) => {
+const Feature72 = (props: Props) => {
   const { heading, description, buttons, features, className } = {
     ...defaultProps,
     ...props,
   };
 
   return (
-    <section className={cn("py-16 m-auto", className)}>
+    <section className={cn("py-32", className)}>
       <div className="container mx-auto">
-        <div className="mb-9 lg:mb-14 lg:max-w-3xl">
+        <div className="mb-9 lg:mb-14 lg:max-w-sm">
           <h2 className="mb-3 text-3xl font-semibold tracking-tight text-balance md:mb-4 md:text-4xl lg:mb-6">
             {heading}
           </h2>
@@ -147,26 +147,20 @@ const Feature73 = (props: Props) => {
             <Button variant="link" render={<a href={buttons.primary.url} className="group flex items-center font-medium md:text-base lg:text-lg" />} nativeButton={false}>{buttons.primary.text}<ArrowRight /></Button>
           )}
         </div>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {features?.slice(0, 3).map((feature, i) => (
+        <div className="grid gap-6 md:grid-cols-2">
+          {features?.slice(0, 4).map((feature, i) => (
             <div
               key={i}
               className="flex flex-col overflow-clip rounded-xl border border-border"
             >
-              <a href={feature.href}>
-                <img
-                  src={feature.image.src}
-                  alt={feature.image.alt}
-                  className="aspect-4/3 h-full w-full object-cover object-top transition-opacity hover:opacity-80"
-                />
-              </a>
-              <div className="px-5 pt-6 pb-6 md:px-6 md:pb-7 lg:px-8 lg:pb-8">
-                <h3 className="mb-2 text-base font-semibold md:text-lg">
+          
+              <div className="px-6 pt-8 pb-8 md:px-8 md:pb-10 lg:px-10 lg:pb-12">
+                <h3 className="mb-2 text-lg font-semibold md:text-2xl">
                   {feature.title}
                 </h3>
-                <div className="text-sm text-muted-foreground md:text-base lg:text-lg">
+                <p className="mb-4 text-muted-foreground lg:text-lg">
                   {feature.description}
-                </div>
+                </p>
               </div>
             </div>
           ))}
@@ -176,4 +170,4 @@ const Feature73 = (props: Props) => {
   );
 };
 
-export { Feature73 };
+export { Feature72 };

@@ -1,5 +1,4 @@
 import {
-  ArrowRight,
   Blocks,
   Globe,
   Layers,
@@ -9,12 +8,10 @@ import {
 } from "lucide-react";
 import { cn } from "cn";
 
-import { Button } from "@/components/ui/button";
-
 interface FeatureCardListItem {
   title: string;
-  description: any;
-  image: Image;
+  description: string;
+  image?: Image;
   href?: string;
   icon?: React.ReactNode;
   label?: string;
@@ -24,31 +21,20 @@ interface Image {
   alt: string;
   srcDark?: string;
 }
-interface Button {
-  text: string;
-  url: string;
-  icon?: React.ReactNode;
-}
-interface Buttons {
-  primary?: Button;
-  secondary?: Button;
-}
 
 interface FeatureCardListProps {
   heading: string;
-  description?: any;
+  description: string;
   features?: FeatureCardListItem[];
-  buttons?: Buttons;
   className?: string;
 }
 
-interface Feature73Props extends FeatureCardListProps {}
-type Props = Partial<Feature73Props>;
+interface Feature13Props extends FeatureCardListProps { }
+type Props = Partial<Feature13Props>;
 
-const defaultProps: Feature73Props = {
+const defaultProps: Feature13Props = {
   heading: "Build faster with production ready features",
-  description:
-    "Every component is built with React, Tailwind CSS, and shadcn/ui. Copy, paste, and customize to match your brand in minutes.",
+  description: "Hello world",
   features: [
     {
       icon: <Zap className="size-5" />,
@@ -117,57 +103,53 @@ const defaultProps: Feature73Props = {
       href: "https://www.shadcnblocks.com",
     },
   ],
-  buttons: {
-    primary: {
-      text: "Browse Components",
-      url: "https://www.shadcnblocks.com",
-    },
-  },
 };
 
-const Feature73 = (props: Props) => {
-  const { heading, description, buttons, features, className } = {
+const Feature13 = (props: Props) => {
+  const { heading, description, features, className } = {
     ...defaultProps,
     ...props,
   };
 
   return (
-    <section className={cn("py-16 m-auto", className)}>
+    <section className={cn("py-16", className)}>
       <div className="container mx-auto">
-        <div className="mb-9 lg:mb-14 lg:max-w-3xl">
-          <h2 className="mb-3 text-3xl font-semibold tracking-tight text-balance md:mb-4 md:text-4xl lg:mb-6">
-            {heading}
-          </h2>
-          {description && (
-            <p className="mb-8 text-muted-foreground lg:text-lg">
+        {heading && (
+          <div className="mx-auto mb-9 max-w-5xl text-center lg:mb-14">
+            <h2 className="text-4xl font-semibold tracking-tight text-balance lg:text-5xl">
+              {heading}
+            </h2>
+            <div className="mb-8 mt-2 w-full m-auto max-w-xl text-muted-foreground lg:text-lg">
               {description}
-            </p>
-          )}
-          {buttons?.primary && (
-            <Button variant="link" render={<a href={buttons.primary.url} className="group flex items-center font-medium md:text-base lg:text-lg" />} nativeButton={false}>{buttons.primary.text}<ArrowRight /></Button>
-          )}
-        </div>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {features?.slice(0, 3).map((feature, i) => (
+            </div>
+          </div>
+        )}
+        <div className="grid gap-6 lg:grid-cols-3">
+          {features?.slice(0, 4).map((feature, index) => (
             <div
-              key={i}
-              className="flex flex-col overflow-clip rounded-xl border border-border"
+              key={index}
+              className="flex flex-col justify-between rounded-lg bg-muted"
             >
-              <a href={feature.href}>
-                <img
-                  src={feature.image.src}
-                  alt={feature.image.alt}
-                  className="aspect-4/3 h-full w-full object-cover object-top transition-opacity hover:opacity-80"
-                />
-              </a>
-              <div className="px-5 pt-6 pb-6 md:px-6 md:pb-7 lg:px-8 lg:pb-8">
-                <h3 className="mb-2 text-base font-semibold md:text-lg">
-                  {feature.title}
-                </h3>
-                <div className="text-sm text-muted-foreground md:text-base lg:text-lg">
-                  {feature.description}
+              <div className="flex justify-between gap-10 border-b">
+                <div className="flex flex-col justify-start gap-8 py-6 pl-4 md:gap-14 md:py-10 md:pl-8 lg:justify-normal">
+                  <span className="font-mono text-xs text-muted-foreground">
+                    {feature.label}
+                  </span>
+                  <a href={feature.href}>
+                    <h3 className="text-2xl font-semibold tracking-tight transition-all hover:text-primary hover:opacity-80 sm:text-3xl lg:text-4xl">
+                      {feature.title}
+                    </h3>
+                  </a>
+                </div>
+                <div className="flex w-2/5 shrink-0 items-stretch justify-stretch rounded-r-lg border-l md:w-1/3">
+                  <div className="flex size-full items-center justify-center p-6 [&>svg]:size-full">
+                    {feature.icon}
+                  </div>
                 </div>
               </div>
+              <p className="p-4 text-muted-foreground md:p-8">
+                {feature.description}
+              </p>
             </div>
           ))}
         </div>
@@ -176,4 +158,4 @@ const Feature73 = (props: Props) => {
   );
 };
 
-export { Feature73 };
+export { Feature13 };
