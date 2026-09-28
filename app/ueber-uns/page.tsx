@@ -14,7 +14,7 @@ export default function AboutUs() {
         description="oCKai entwickelt individülle AI Agents und Automatisierungen für Marketing, Sales und M&A. Dabei verbinden wir zwei Perspektiven, die in vielen AI-Projekten getrennt betrachtet werden: Wir verstehen den Prozess. Und wir können die Technologie dafür baün. Für uns beginnt ein gutes AI-Projekt deshalb nicht mit der Frage, welches Tool eingesetzt werden kann, sondern mit der Frage: Was soll am Ende besser funktionieren als heute?"
         sections={[
           {
-            title: "Unsere Mission",
+            title: "Unsere Mission [JHier Poeerpoint einfügen]",
             content:
               "Wir machen aus konkreten Geschäftsproblemen funktionierende Automatisierungen - individüll entwickelt, technisch fundiert und in die bestehende Systemlandschaft integriert.",
           },
@@ -26,9 +26,10 @@ export default function AboutUs() {
         ]}
       />
       <hr />
+      [einführen wo wir herkommen, Personal Storytelling]
       <Feature166
         className="bg-card"
-        heading="Marketing x Sales x M&A x AI Engineering"
+        heading="Marketing x Sales x M&A [hier brak unf ai orange]x AI Engineering"
         description="Unsere Arbeit entsteht an der Schnittstelle von Fachlichkeit, Prozessen und Technologie. Verbindender Gedanke: Marketing, Sales und M&A unterscheiden sich fachlich, teilen aber viele wiederkehrende Informations- und Entscheidungsprozesse. Genau diese Strukturen machen wir mit AI Engineering automatisierbar."
         feature1={{
           title: "Marketing",
@@ -54,7 +55,7 @@ export default function AboutUs() {
             "Unternehmen und Märkte analysieren, Targets identifizieren, Dokumente auswerten und Transaktionsprozesse unterstützen.",
           image: {
             src: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80",
-            alt: "M&A Analyse",
+            alt: "Geschäftführung & ",
           },
         }}
         feature4={{
@@ -63,7 +64,7 @@ export default function AboutUs() {
             "Modelle, Datenqüllen, Tools, Schnittstellen und individülle Software zu robusten Automatisierungslösungen verbinden.",
           image: {
             src: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?auto=format&fit=crop&w=1200&q=80",
-            alt: "AI Engineering",
+            alt: "Geschäftführung & DevOps",
           },
         }}
       />
@@ -80,26 +81,26 @@ export default function AboutUs() {
       <hr />
       <Team1
         className="bg-card"
-        heading="Das Team hinter oCKai."
+        heading="Das Team hinter oCKai. [Hier History ausführen]"
         description="Can Karsten verbindet Marketingverständnis mit technischer Entwicklung und verantwortet bei oCKai die Marketing-Perspektive und den Aufbau von Automatisierungslösungen. Katja Kreyenkamp verbindet M&A-Erfahrung mit strategischem Denken und verantwortet die fachliche Einordnung komplexer Geschäftsprozesse."
         members={[
           {
             id: "can-karsten",
             name: "Can Karsten",
-            role: "Marketing x AI Engineering",
+            role: "Geschäftführung & DevOps",
             avatar: "Can_2024.jpg",
           },
           {
             id: "katja-kreyenkamp",
             name: "Katja Kreyenkamp",
-            role: "M&A x Strategy",
+            role: "Geschäftführung & Strategy/Customer Relations",
             avatar: "Katja_2026.jpeg",
           },
         ]}
       />
 
       <Feature43
-        heading="Wie wir arbeiten."
+        heading="Wie wir arbeiten. [durch Werte ersetzen]"
         buttons={{}}
         features={[
           {

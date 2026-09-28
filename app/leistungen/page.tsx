@@ -13,8 +13,8 @@ export default function Leistungen() {
   return (
     <main>
       <Hero1
-        heading="Intelligente Automatisierung für Ihre wichtigsten Prozesse."
-        description="Von der Recherche bis zur Umsetzung. Wir entwickeln AI Agents und Automatisierungen für konkrete Geschäftsprozesse in Marketing, Sales und M&A. Dabei reicht das Spektrum von einfachen Workflows bis hin zu individuell entwickelten Agenten- und Softwaresystemen. Der Anwendungsfall bestimmt die Lösung. Nicht umgekehrt."
+        heading="Von der Recherche bis zur Umsetzung."
+        description=" Wir entwickeln AI Agenten und Automatisierungen für konkrete Geschäftsprozesse in Marketing, Sales und M&A."
         buttons={{
           primary: { text: "Anwendungsfall besprechen", url: "/kontakt" },
           secondary: { text: "Vorgehen ansehen", url: "#vorgehen" },
@@ -25,10 +25,11 @@ export default function Leistungen() {
         }}
       />
       <hr />
+      [Hier einfügen: Drei technologien ein Ziel (workflow, Agent, Hybrid)]
       <Feature73
         className="bg-card"
-        heading="Drei Disziplinen. Eine technische Logik."
-        description="Marketing, Sales und M&A folgen unterschiedlichen Zielen, teilen aber eine gemeinsame Informations- und Entscheidungslogik. Genau diese Struktur unterstützen wir mit AI und Automatisierung."
+        heading="Drei Disziplinen. Eine technische Logik. [Fälle als Liste]"
+        description="Marketing, Sales und M&A folgen unterschiedlichen Zielen, teilen aber eine gemeinsame Informations- und Entscheidungslogik. Genau diese Struktur unterstützen wir mit KI und Automatisierung."
         buttons={{}}
         features={[
           {
@@ -62,8 +63,8 @@ export default function Leistungen() {
       />
       <hr />
       <Feature2
-        heading="Marketingprozesse schneller von Information zu Umsetzung bringen."
-        description="Marketing besteht aus vielen wiederkehrenden Aufgaben: recherchieren, strukturieren, vergleichen, vorbereiten, erstellen, verteilen und auswerten. Viele dieser Schritte lassen sich automatisieren oder intelligent unterstützen.\n\nMarket Intelligence: Märkte, Unternehmen, Wettbewerber oder Trends automatisiert beobachten und relevante Informationen strukturiert aufbereiten.\n\nPartner & Kooperationen: Potenzielle Partner identifizieren, recherchieren, anhand definierter Kriterien bewerten und für die Ansprache vorbereiten.\n\nCampaign Support: Kampagnenprozesse von der Recherche über die Vorbereitung bis zum Reporting unterstützen und automatisieren.\n\nContent Workflows: Informationen aus verschiedenen Quellen zusammenführen und für wiederkehrende Content-Prozesse nutzbar machen.\n\nMarketing Reporting: Daten aus verschiedenen Systemen zusammenführen, analysieren und in verständliche Reports überführen.\n\nUnser Ansatz: Wir betrachten nicht nur einzelne Marketingaufgaben, sondern den gesamten Ablauf - von der ersten Information bis zur Umsetzung - und automatisieren dort, wo ein echter Effekt entsteht."
+        heading="Marketingprozesse schneller von Information zu Umsetzung bringen.[Akkordeon + Unser Ansatz nach oben]"
+        description="Marketing besteht aus vielen wiederkehrenden Aufgaben: recherchieren, strukturieren, vergleichen, vorbereiten, erstellen, verteilen und auswerten. Viele dieser Schritte lassen sich automatisieren oder intelligent unterstützen.\n\nMarket Reporting: Märkte, Unternehmen, Wettbewerber oder Trends automatisiert beobachten, analysieren und relevante Informationen strukturiert aufbereiten.\n\nPartner & Kooperationen: Potenzielle Partner identifizieren, recherchieren, anhand definierter Kriterien bewerten und für die Ansprache vorbereiten.\n\nCampaign Support: Kampagnenprozesse von der Recherche über die Vorbereitung bis zum Reporting unterstützen und automatisieren.\n\nContent Workflows: Informationen aus verschiedenen Quellen zusammenführen und für wiederkehrende Content-Prozesse nutzbar machen.\n\n\nUnser Ansatz: Wir betrachten nicht nur einzelne Marketingaufgaben, sondern den gesamten Ablauf - von der ersten Information bis zur Umsetzung - und automatisieren dort, wo ein echter Effekt entsteht."
         buttons={{
           primary: { text: "Marketing-Use-Case besprechen", url: "/kontakt" },
         }}
@@ -77,7 +78,7 @@ export default function Leistungen() {
         className="bg-card"
         reverse
         heading="Aus Informationen schneller konkrete Vertriebsarbeit machen."
-        description="Sales-Teams verbringen viel Zeit mit Recherche, Vorbereitung, Dokumentation und Nachbereitung. AI und Automatisierung können diese Prozesse beschleunigen, ohne den persönlichen Kundenkontakt aus dem Mittelpunkt zu nehmen.\n\nLead Research: Unternehmen und Ansprechpartner automatisiert recherchieren und relevante Informationen zusammentragen.\n\nLead Qualification & Priorisierung: Potenzielle Kunden anhand definierter Kriterien bewerten und für die weitere Bearbeitung priorisieren.\n\nAccount Research: Relevante Informationen zu bestehenden und potenziellen Kunden strukturiert verfügbar machen.\n\nGesprächsvorbereitung: Informationen aus CRM, Unternehmenswebsites, Nachrichten und weiteren Quellen für Termine zusammenführen.\n\nCRM Automation: Wiederkehrende Dokumentations-, Datenpflege- und Follow-up-Prozesse automatisieren.\n\nAngebote & Follow-ups: Vertriebsinformationen strukturiert aufbereiten und nachgelagerte Prozesse unterstützen.\n\nUnser Ansatz: Sales-Automatisierung soll nicht mehr Softwarearbeit erzeugen. Sie soll Vertriebsmitarbeiter mit den richtigen Informationen versorgen und unnötige manuelle Schritte reduzieren."
+        description="Sales-Teams verbringen viel Zeit mit Recherche, Vorbereitung, Dokumentation und Nachbereitung. AI und Automatisierung können diese Prozesse beschleunigen, ohne den persönlichen Kundenkontakt aus dem Mittelpunkt zu nehmen.\n\nLead Research: Unternehmen und Ansprechpartner automatisiert recherchieren und relevante Informationen zusammentragen.\n\nLead Qualification & Priorisierung: Potenzielle Kunden anhand definierter Kriterien bewerten und für die weitere Bearbeitung priorisieren.\n\nAccount Research: Relevante Informationen zu bestehenden und potenziellen Kunden strukturiert verfügbar machen.\n\nGesprächsvorbereitung: Informationen aus CRM, Unternehmenswebsites, Nachrichten und weiteren Quellen für Termine zusammenführen.\n\nCRM Automation: Wiederkehrende Dokumentations-, Datenpflege- und Follow-up-Prozesse automatisieren.\n\nAngebote & Follow-ups: Vertriebsinformationen strukturiert aufbereiten und nachgelagerte Prozesse unterstützen.\n\nUnser Ansatz: Sales-Automatisierung soll nicht mehr Softwarearbeit erzeugen. Sie soll Vertriebsmitarbeiter mit den richtigen Informationen versorgen und manuelle Schritte reduzieren."
         buttons={{
           primary: { text: "Sales-Use-Case besprechen", url: "/kontakt" },
         }}

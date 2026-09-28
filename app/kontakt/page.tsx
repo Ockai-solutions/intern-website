@@ -36,7 +36,7 @@ export default function Kontakt() {
                 email="info@ockai.de"
                 phoneLabel="Telefon"
                 phoneDescription="Für einen direkten ersten Austausch."
-                phone="+49 176 41710372"
+                phone="+49 177 7155384"
                 linkedinLabel="LinkedIn"
                 linkedinDescription="Für Einblicke, Updates und den direkten Kontakt mit oCKai."
                 linkedinUrl="https://www.linkedin.com/company/ockai"
