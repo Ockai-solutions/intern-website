@@ -1,9 +1,7 @@
 
 import { BookADemo1 } from "@/components/bookademo1";
 import { Contact7 } from "@/components/contact7";
-import { Cta34 } from "@/components/cta34";
 import { Feature1 } from "@/components/feature1";
-import { Process1 } from "@/components/process1";
 
 export default function Kontakt() {
     return (
@@ -12,6 +10,7 @@ export default function Kontakt() {
                 heading="Welchen Prozess möchten Sie automatisieren?"
                 description="Sie haben bereits einen konkreten Use Case? Oder Sie wissen nur, dass ein Prozess zu viel Zeit kostet, häufig manuell abläuft oder sich nur schwer skalieren lässt? Beides ist ein guter Ausgangspunkt."
                 ctaText="Gespräch anfragen"
+                mailtoTo="info@ockai.de"
                 microcopy="Wir melden uns persönlich bei Ihnen, um den Anwendungsfall und mögliche nächste Schritte zu besprechen."
             />
 
