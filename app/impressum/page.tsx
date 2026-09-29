@@ -63,6 +63,14 @@ export default function Impressum() {
 					<h2 className="text-2xl font-semibold tracking-tight text-foreground">Urheberrechtshinweis</h2>
 					<p>Die auf unserer Website verfügbaren Texte, Bilder, Fotos, Videos und Grafiken sind grundsätzlich urheberrechtlich geschützt. Jede nicht genehmigte Nutzung, insbesondere die Vervielfältigung, Bearbeitung und Verbreitung, dieser urheberrechtlich geschützten Inhalte ist daher untersagt.</p>
 				</section>
+
+				<hr className="border-border" />
+
+				<section className="space-y-5">
+					<h2 className="text-2xl font-semibold tracking-tight text-foreground">Bildnachweise</h2>
+					<p>Pexels – https://pexels.com</p>
+					<p>Iconify Design – https://iconify.design/</p>
+				</section>
 			</article>
 		</main>
 	);

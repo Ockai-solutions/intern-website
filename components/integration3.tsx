@@ -78,7 +78,7 @@ const Integration3 = ({
             </h2>
           </div>
 
-          <div className="flex flex-col justify-center gap-4">
+          <div className="flex flex-col justify-center gap-4 columns-2">
             {items.map(({ id, icon, title, description }) => (
               <div key={id} className="flex items-center gap-4 py-4">
                 <div className="h-12 w-12 flex-shrink-0">

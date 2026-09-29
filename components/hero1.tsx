@@ -9,6 +9,10 @@ interface Image {
   alt: string;
   srcDark?: string;
 }
+interface Video {
+  src: string;
+  alt: string;
+}
 interface Button {
   text: string;
   url: string;
@@ -29,11 +33,12 @@ interface HeroBasicProps {
   heading: string;
   description: string;
   buttons?: Buttons;
-  image: Image;
+  image?: Image;
+  video?: Video;
   className?: string;
 }
 
-interface Hero1Props extends HeroBasicProps {}
+interface Hero1Props extends HeroBasicProps { }
 type Props = Partial<Hero1Props>;
 
 const defaultProps: Hero1Props = {
@@ -49,16 +54,11 @@ const defaultProps: Hero1Props = {
       text: "View GitHub",
       url: "https://shadcnblocks.com",
     },
-  },
-  image: {
-    src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/image-set/modern/saas-hero/saas-hero-1-16x9.png",
-    srcDark: "https://deifkwefumgah.cloudfront.net/shadcnblocks/image-set/modern/saas-hero/saas-hero-1-16x9-dark.png",
-    alt: "Hero Image Placeholder",
-  },
+  }
 };
 
 const Hero1 = (props: Props) => {
-  const { badge, heading, description, buttons, image, className } = {
+  const { badge, heading, description, buttons, image, video, className } = {
     ...defaultProps,
     ...props,
   };
@@ -89,26 +89,41 @@ const Hero1 = (props: Props) => {
               )}
             </div>
           </div>
-          {image.srcDark ? (
-            <>
+          {image ? (
+            image.srcDark ? (
+              <>
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="aspect-video w-full rounded-md border border-border object-cover object-top dark:hidden"
+                />
+                <img
+                  src={image.srcDark}
+                  alt={image.alt}
+                  className="hidden aspect-video w-full rounded-md border border-border object-cover object-top dark:block"
+                />
+              </>
+            ) : (
               <img
                 src={image.src}
                 alt={image.alt}
-                className="aspect-video w-full rounded-md border border-border object-cover object-top dark:hidden"
+                className="aspect-video w-full rounded-md border border-border object-cover object-top"
               />
-              <img
-                src={image.srcDark}
-                alt={image.alt}
-                className="hidden aspect-video w-full rounded-md border border-border object-cover object-top dark:block"
-              />
-            </>
-          ) : (
-            <img
-              src={image.src}
-              alt={image.alt}
-              className="aspect-video w-full rounded-md border border-border object-cover object-top"
-            />
-          )}
+            )
+          ) : (<></>)}
+          {video ? (
+            <div className="relative">
+              <video
+                src={video.src}
+                autoPlay={true}
+                muted={true}
+                loop={true}
+                className="h-full w-full object-cover"
+              ></video>
+
+              <div className="absolute inset-0 bg-primary/100 mix-blend-color"></div>
+            </div>
+          ) : (<></>)}
         </div>
       </div>
     </section>

@@ -28,16 +28,19 @@ export default function Home() {
           primary: { text: "Anwendungsfall besprechen", url: "/kontakt" },
           secondary: { text: "Leistungen entdecken", url: "/leistungen" },
         }}
-        image={{
+        /*image={{
           src: "https://images.unsplash.com/photo-1758626042818-b05e9c91b84a?fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YWklMjB0cmFuc2Zvcm1hdGlvbnxlbnwwfHwwfHx8MA%3D%3D&ixlib=rb-4.1.0&q=60&w=3000",
-          srcDark:
-            "https://images.unsplash.com/photo-1758626042818-b05e9c91b84a?fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YWklMjB0cmFuc2Zvcm1hdGlvbnxlbnwwfHwwfHx8MA%3D%3D&ixlib=rb-4.1.0&q=60&w=3000",
+          srcDark: "https://images.unsplash.com/photo-1758626042818-b05e9c91b84a?fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YWklMjB0cmFuc2Zvcm1hdGlvbnxlbnwwfHwwfHx8MA%3D%3D&ixlib=rb-4.1.0&q=60&w=3000",
+          alt: "Abstrakte Darstellung eines automatisierten digitalen Prozesses",
+        }}*/
+        video={{
+          src: "hero.mp4",
           alt: "Abstrakte Darstellung eines automatisierten digitalen Prozesses",
         }}
       />
       <hr />
       <VennDiagramFeature
-className="bg-popover"
+        className="bg-popover"
         heading="Marketing, Sales und M&A folgen einer ähnlichen Logik:"
         description={
           <>
@@ -127,7 +130,7 @@ className="bg-popover"
       />
       <hr />
       <Process1
-className="bg-popover"
+        className="bg-popover"
         heading="Aus einem Use Case wird eine funktionierende Lösung"
         description="Wir führen den Prozess von der ersten Idee bis zur umsetzbaren Lösung strukturiert durch und richten Scope und Technik am konkreten Anwendungsfall aus."
         steps={[
