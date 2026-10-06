@@ -3,7 +3,10 @@ import { Feature73 } from "@/components/feature73";
 import { Feature1 } from "@/components/feature1";
 import { Integration3 } from "@/components/integration3";
 import { Process1 } from "@/components/process1";
-import { Cta38 } from "@/components/cta38";
+
+import config from "@payload-config";
+import { getPayload } from "payload";
+
 import { VennDiagramFeature } from "@/components/venn1";
 import { Hero1 } from "@/components/hero1";
 import {
@@ -17,7 +20,21 @@ import {
 import { Cta34 } from "@/components/cta34";
 import { url } from "inspector";
 
-export default function Home() {
+export default async function Home() {
+
+  const payload = await getPayload({ config });
+
+  const media = await payload.find({
+    collection: "media",
+    where: {
+      filename: {
+        equals: "my-image.png",
+      },
+    },
+    limit: 1,
+  });
+  const image = media.docs[0];
+
   return (
     <main>
       <Hero1
