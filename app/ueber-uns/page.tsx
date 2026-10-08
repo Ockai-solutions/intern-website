@@ -28,7 +28,7 @@ export default function AboutUs() {
           {
             title: "Unsere Mission",
             description:
-              "Unser Unternehmen hat außerdem die Mis­sion, Unternehmen durch passgenaue KI-Agenten, individuellen Code und bewährte KI-Systeme dabei zu unterstützen, die bestmöglichen Entscheidungen entlang ihrer Marketing-, Sales, und M&A-Prozesse zu treffen. Wir setzen uns dafür ein, den gesamten Kunden Lifecycle zu automatisieren, ohne dass unsere Kunden sich in eine neue Plattform oder Abhängigkeit begeben müssen. Dabei bewahren wir stets Transparenz, Sicherheit und die volle Kontrolle beim Kunden, damit jede Automatisierung reibungslos, vertrauenswürdig und wirkungsvoll verläuft.",
+              "Unser Unternehmen hat die Mis­sion, Unternehmen durch passgenaue KI-Agenten, individuellen Code und bewährte KI-Systeme dabei zu unterstützen, die bestmöglichen Entscheidungen entlang ihrer Marketing-, Sales, und M&A-Prozesse zu treffen. Wir setzen uns dafür ein, den gesamten Kunden Lifecycle zu automatisieren, ohne dass unsere Kunden sich in eine neue Plattform oder Abhängigkeit begeben müssen. Dabei bewahren wir stets Transparenz, Sicherheit und die volle Kontrolle beim Kunden, damit jede Automatisierung reibungslos, vertrauenswürdig und wirkungsvoll verläuft.",
             image: {
               src: "#",
               alt: "Full Source Code",

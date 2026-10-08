@@ -1,6 +1,7 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import Link from 'next/link'
 
 type VennSet = {
   label: string;
@@ -101,14 +102,14 @@ function VennDiagram({
   const positions =
     sets.length === 2
       ? [
-          { x: size * 0.28, y: size * 0.5 },
-          { x: size * 0.52, y: size * 0.5 },
-        ]
+        { x: size * 0.28, y: size * 0.5 },
+        { x: size * 0.52, y: size * 0.5 },
+      ]
       : [
-          { x: size * 0.35, y: size * 0.35 },
-          { x: size * 0.65, y: size * 0.35 },
-          { x: size * 0.5, y: size * 0.62 },
-        ];
+        { x: size * 0.35, y: size * 0.35 },
+        { x: size * 0.65, y: size * 0.35 },
+        { x: size * 0.5, y: size * 0.62 },
+      ];
 
   return (
     <div
@@ -206,19 +207,21 @@ function VennDiagram({
       })}
 
       {centerLabel && (
-        <div
-          className={cn(
-            "pointer-events-none absolute left-1/2 top-1/2",
-            "-translate-x-1/2 -translate-y-1/2",
-            "max-w-[35%] text-center text-sm font-semibold",
-            "rounded-sm bg-card p-2 sm:p-4"
-          )}
-          style={{
-            color: centerTextColor,
-          }}
-        >
-          {centerLabel}
-        </div>
+        <Link href="/leistungen">
+          <div
+            className={cn(
+              "absolute left-1/2 top-1/2",
+              "-translate-x-1/2 -translate-y-1/2",
+              "max-w-[35%] text-center text-sm font-semibold",
+              "rounded-sm bg-card p-2 sm:p-4"
+            )}
+            style={{
+              color: centerTextColor,
+            }}
+          >
+            {centerLabel}
+          </div>
+        </Link>
       )}
     </div>
   );

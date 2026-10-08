@@ -72,7 +72,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               ],
             },
           ]}
-          copyright="© 2026 ockai.de. All rights reserved."
+          copyright='© 2026 ockai.de | All rights reserved.'
           legalLinks={[
             { name: "Impressum", href: "/impressum" },
             { name: "Datenschutz", href: "/datenschutz" },

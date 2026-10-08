@@ -7,8 +7,6 @@ RUN npm ci
 
 COPY . .
 
-ENV NEXT_PUBLIC_VERSION="v0.1.0"
-
 RUN npm run build
 
 EXPOSE 3000
