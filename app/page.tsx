@@ -87,14 +87,14 @@ export default function Home() {
       <hr />
       <Feature43
 
-        heading="Was unseren Service auszeichnet."
+        heading="Was unsere Lösungen auszeichnet."
         buttons={{}}
         features={[
           {
             icon: <Fingerprint className="size-5" />,
             title: "Individuell",
             description:
-              "Ihre individuelle Lösung die spezifisch für Ihren konkreten Anwendungsfall entwickelt wird und perfekt zu Ihnen passt.",
+              "Eine Lösung die spezifisch für Ihren konkreten Anwendungsfall entwickelt wird und perfekt zu Ihnen passt.",
           },
           {
             icon: <Plug className="size-5" />,
@@ -168,7 +168,7 @@ export default function Home() {
       <hr />
       <Cta34
         heading="Mehr Zeit für die wichtigen Dinge."
-        description="Das Ziel unserer Arbeit ist ein besserer Prozess. Weniger manuelle Arbeit. Schnellere Abläufe. Besser nutzbare Informationen. Mehr Zeit für die Aufgaben, bei dem Ihre Mitarbeitenden den Unterschied machen. Sie haben bereits einen konkreten Use Case? Oder Sie wissen, dass ein Prozess unnötig viel Zeit kostet, wissen aber noch nicht, wie eine Automatisierung aussehen könnte?"
+        description="Das Ziel unserer Arbeit ist ein besserer Prozess. Weniger manuelle Arbeit. Schnellere Abläufe. Besser nutzbare Informationen. Mehr Zeit für die Aufgaben, bei Ihre Mitarbeitenden den Unterschied machen. Sie haben bereits einen konkreten Use Case? Oder Sie wissen, dass ein Prozess unnötig viel Zeit kostet, wissen aber noch nicht, wie eine Automatisierung aussehen könnte?"
         buttons={{
           primary: { text: "Jetzt Anwendungsfall besprechen", url: "/kontakt" },
           secondary: { text: "Leistungen ansehen", url: "/leistungen" },
