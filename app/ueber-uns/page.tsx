@@ -16,7 +16,7 @@ export default function AboutUs() {
         heading="Über uns"
         description=""
         features={[
-          {
+          /*{
             title: "Unsere Vision",
             description:
               "oCKai strebt danach, der führende Partner für intelligente Automatisierung in Marketing, Sales und M&A zu sein, indem wir Unternehmen eine maßgeschneiderte, sicher integrierte und skalierbare Lösung bieten, die direkt in Ihrer bestehenden Systemlandschaft funktioniert. Unser Ziel ist es, Expertenwissen, das heute oft nur in den Köpfen einzelner Mitarbeitender existiert, in wiederholbare, automatisierte Prozesse zu übersetzen und für alle drei Disziplinen gleichermaßen zugänglich zu machen, ohne dabei die Kontrolle über die eigenen Daten und Systeme aufzugeben. So schaffen wir eine nachhaltige und skalierbare Zukunft.",
@@ -24,7 +24,7 @@ export default function AboutUs() {
               src: "#",
               alt: "Full Source Code",
             },
-          },
+          },*/
           {
             title: "Unsere Mission",
             description:
@@ -84,7 +84,7 @@ export default function AboutUs() {
           {
             id: "can-karsten",
             name: (<>Can Karsten <br/>Geschäftsführung | Entwicklung | Delivery</>),
-            role: "Mit seinem MBA in Artificial Intelligence hat er jahrelange Erfahrungen im Einsatz von KI-Systemen im Konzernumfeld gesammelt, von der Strategie bis zur Execution. Er verantwortet die Marketing Practice und unterstützt Sie von der Identifikation passender Kooperationspartner bis zur Erfolgsmessung von Kampagnen",
+            role: "Mit seinem MBA in Artificial Intelligence hat er jahrelange Erfahrungen im Einsatz von KI-Systemen im Konzernumfeld gesammelt, von der Strategie bis zur Execution. Er verantwortet die Marketing Practice und unterstützt Sie von der Identifikation passender Kooperationspartner bis zur Erfolgsmessung von Kampagnen.",
             avatar: "Can_2024.jpg",
           },
           {

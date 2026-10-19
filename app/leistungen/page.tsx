@@ -95,7 +95,7 @@ export default function Leistungen() {
             title: "Sales",
             description: (
               <>
-                Informationen schneller in konkrete Vertriebsarbeit übersetzen.<hr className="mb-2 mt-2" />
+                Kundeninformationen schneller in konkrete Vertriebsarbeit übersetzen.<hr className="mb-2 mt-2" />
                 <b>Use Cases:</b>
                 <br />· Lead Research
                 <br />· Lead Qualification
@@ -219,7 +219,7 @@ export default function Leistungen() {
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
-            <p>Unser Ansatz: Sales-Automatisierung soll Vertriebsmitarbeiter mit den richtigen Informationen versorgen und unnötige manuelle Schritte reduzieren.</p>
+            <p>Unser Ansatz: Unsere Sales-Automatisierung soll Vertriebsmitarbeiter mit den richtigen Informationen versorgen und unnötige manuelle Schritte reduzieren.</p>
           </>
         }
         buttons={{
@@ -271,7 +271,7 @@ export default function Leistungen() {
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
-            <p>Unser Ansatz: automatisieren die Arbeit, die notwendig ist, damit Menschen schneller und fundierter entscheiden können.</p>
+            <p>Unser Ansatz: Wir automatisieren die Arbeit, die notwendig ist, damit Menschen schneller und fundierter entscheiden können.</p>
           </>
         }
         buttons={{
@@ -337,7 +337,7 @@ export default function Leistungen() {
       <hr />
       <Integration3
         heading="Unser Werkzeugkasten"
-        subheading="Wir nutzen für jeden Anwedungsfall das passende Framework"
+        subheading="Wir nutzen für jeden Anwedungsfall die passende Technologie"
         items={[
           {
             id: 1,
