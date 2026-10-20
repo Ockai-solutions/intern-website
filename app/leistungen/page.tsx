@@ -341,49 +341,49 @@ export default function Leistungen() {
         items={[
           {
             id: 1,
-            icon: "https://api.iconify.design/selfhst:chatgpt.svg",
+            icon: "https://api.iconify.design/selfhst/chatgpt.svg",
             title: "OpenAI SDK",
             description:
               "",
           },
           {
             id: 2,
-            icon: "https://api.iconify.design/logos:microsoft-icon.svg",
+            icon: "https://api.iconify.design/logos/microsoft-icon.svg",
             title: "MS Copilot",
             description:
               "",
           },
           {
             id: 3,
-            icon: "https://api.iconify.design/selfhst:microsoft-power-automate.svg",
+            icon: "https://api.iconify.design/selfhst/microsoft-power-automate.svg",
             title: "Power Automate",
             description:
               "",
           },
           {
             id: 4,
-            icon: "https://api.iconify.design/devicon:n8n.svg",
+            icon: "https://api.iconify.design/devicon/n8n.svg",
             title: "n8n",
             description:
               "",
           },
           {
             id: 5,
-            icon: "https://api.iconify.design/selfhst:flowise.svg",
+            icon: "https://api.iconify.design/selfhst/flowise.svg",
             title: "Flowise",
             description:
               "",
           },
           {
             id: 6,
-            icon: "https://api.iconify.design/thesvg-color:mastra.svg",
+            icon: "https://api.iconify.design/thesvg-color/mastra-light.svg",
             title: "Mastra",
             description:
               "",
           },
           {
             id: 7,
-            icon: "https://api.iconify.design/thesvg-color:langchain-corporate.svg",
+            icon: "https://api.iconify.design/thesvg-color/langchain-corporate.svg",
             title: "Langchain",
             description:
               "",
